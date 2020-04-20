@@ -27,7 +27,7 @@ public class UserConverter implements Converter<String, User> {
 
         if (src != null) {
             user.setName("acmday-" + src);
-            user.setBirthday(new Date());
+            user.setBirthday("acmday-UserConverter");
         }
         return user;
     }

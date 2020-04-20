@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class User {
     private String name;
-    private Date birthday;
+    private String birthday;
 
     @Override
     public String toString() {
