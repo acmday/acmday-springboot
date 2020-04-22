@@ -2,8 +2,6 @@ package com.acmday.springboot.server.bo;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * @author acmday.
  * @date 2020/4/17.

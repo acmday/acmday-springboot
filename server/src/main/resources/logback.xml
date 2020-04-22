@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <contextName>springboot-skeleton</contextName>
-    <property name="log.path" value="/home/work/log/springboot-skeleton" />
+    <property name="log.path" value="/home/work/log/acmday-springboot" />
     <property name="log.maxHistory" value="10" />
     <property name="log.colorPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5level %thread %logger %msg%n" />
     <property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n" />

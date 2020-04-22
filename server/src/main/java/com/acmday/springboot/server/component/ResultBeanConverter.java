@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -27,6 +26,7 @@ public class ResultBeanConverter extends AbstractHttpMessageConverter<User> {
 
     public ResultBeanConverter() {
         super(MediaType.valueOf(Constants.PROPERTIES_USER));
+        //super(MediaType.APPLICATION_JSON);
         setDefaultCharset(StandardCharsets.UTF_8);
     }
 
@@ -40,13 +40,14 @@ public class ResultBeanConverter extends AbstractHttpMessageConverter<User> {
         InputStream is = inputMessage.getBody();
         Properties props = new Properties();
         props.load(is);
+
         String birthday = props.getProperty("birthday");
         String name = props.getProperty("name");
+
         User user = new User();
-        user.setBirthday(String.valueOf(new Date(System.currentTimeMillis() / 1000)));
+        user.setBirthday("acmday’s birthday is:"+birthday);
         user.setName(name);
-        log.info("act=readInternal birthday={}, name={}, props={}",
-                birthday, name, new Gson().toJson(props));
+        log.info("act=readInternal birthday={}, name={}, props={}", birthday, name, new Gson().toJson(props));
         return user;
     }
 
@@ -54,9 +55,10 @@ public class ResultBeanConverter extends AbstractHttpMessageConverter<User> {
     protected void writeInternal(User user, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException {
         OutputStream os = outputMessage.getBody();
         Properties properties = new Properties();
-        properties.setProperty("birthday", String.valueOf(new Date(user.getBirthday())));
+        properties.setProperty("birthday", user.getBirthday());
         properties.setProperty("name", user.getName());
         properties.store(os, "acmday-user-comments");
         log.info("act=writeInternal user={}", new Gson().toJson(user));
+        outputMessage.getBody().write(user.toString().getBytes());
     }
 }
