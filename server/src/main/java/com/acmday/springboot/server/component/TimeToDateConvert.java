@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -17,7 +18,7 @@ import java.util.Arrays;
  * @author acmday.
  * @date 2020/4/18.
  */
-//@Component
+@Component
 @Slf4j
 public class TimeToDateConvert {
 

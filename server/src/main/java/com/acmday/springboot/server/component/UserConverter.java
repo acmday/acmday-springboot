@@ -23,8 +23,8 @@ public class UserConverter implements Converter<String, User> {
         User user = new User();
 
         if (src != null) {
-            user.setName("acmday-" + src);
-            user.setBirthday("acmday-UserConverter");
+            user.setName("name=" + src);
+            user.setBirthday("acmday's birthday!");
         }
         return user;
     }

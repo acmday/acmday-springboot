@@ -4,9 +4,14 @@ import com.acmday.springboot.server.bo.User;
 import com.acmday.springboot.server.bo.constants.Constants;
 import com.acmday.springboot.server.service.IHelloService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author acmday.
@@ -15,9 +20,9 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping
-public class HelloController {
+public class ConvertController {
 
-    @Autowired
+    @Resource
     private IHelloService helloService;
 
     @RequestMapping("/echo")
@@ -29,21 +34,16 @@ public class HelloController {
     /**
      * @param user
      * @return
-     * 测试链接：http://localhost:7003/convert?user=1587217358
+     * 测试：curl http://localhost:7003/convert?user=acmday
+     * 测试之前要先把WebMvcConfig的@Configuration注释。
      */
     @RequestMapping("/convert")
     public User convert(User user) {
         log.info("act=convert use.toString={}", user.toString());
-        User user1 = new User();
-        user1.setName("controller-name");
-        user1.setBirthday("controller-birthday");
-        return user1;
+        return user;
     }
 
-    /**
-     * @param user
-     * @return
-     */
+
     //测试链接如下，注意换行符
     //curl -X POST "http://localhost:7003/p2j" -H "accept: */*" -H "Poros-Auth-Token: test-token" -H "Content-Type: application/properties+user" -d 'name=acmday
     //birthday=20170615'
