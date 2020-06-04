@@ -14,7 +14,6 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
 
@@ -53,7 +52,7 @@ public class AcmDayDataSourceConfig {
 
     @Bean(name = "configDayDataSource")
     @Primary
-    public DataSource acmDayDataSourceConfig() throws PropertyVetoException, NamingException {
+    public DataSource acmDayDataSourceConfig() throws PropertyVetoException {
 
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(driverClassName);
@@ -89,7 +88,7 @@ public class AcmDayDataSourceConfig {
 
     @Bean(name = "transactionManager")
     @Primary
-    public DataSourceTransactionManager masterTransactionManager() throws PropertyVetoException, NamingException {
+    public DataSourceTransactionManager masterTransactionManager() throws PropertyVetoException {
         return new DataSourceTransactionManager(acmDayDataSourceConfig());
     }
 
