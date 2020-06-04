@@ -2,7 +2,7 @@ package com.acmday.springboot.server.controller;
 
 import com.acmday.springboot.server.bo.User;
 import com.acmday.springboot.server.bo.constants.Constants;
-import com.acmday.springboot.server.service.IHelloService;
+import com.acmday.springboot.server.service.interfaces.IHelloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

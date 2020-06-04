@@ -1,8 +1,10 @@
 package com.acmday.springboot.server;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author acmday.
@@ -10,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @Slf4j
+@ComponentScan("com.acmday.springboot")
+@MapperScan("com.acmday.springboot.dao.dao.mapper")
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
