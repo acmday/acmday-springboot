@@ -1,7 +1,7 @@
 
 server:
-  port: 7003
+  port: 7004
 
 spring:
   profiles:
-    activate: dev
+    active: dev
