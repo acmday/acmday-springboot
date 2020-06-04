@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @Slf4j
 @ComponentScan("com.acmday.springboot")
-@MapperScan("com.acmday.springboot.dao.dao.mapper")
+//@MapperScan(basePackages = "com.acmday.springboot.dao.dao.mapper")
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
