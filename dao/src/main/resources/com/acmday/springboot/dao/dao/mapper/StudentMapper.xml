@@ -5,7 +5,7 @@
     <result column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="address" jdbcType="VARCHAR" property="address" />
-    <result column="age" jdbcType="VARCHAR" property="age" />
+    <result column="age" jdbcType="TINYINT" property="age" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -94,7 +94,7 @@
     </selectKey>
     insert into student (name, address, age
       )
-    values (#{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}
+    values (#{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{age,jdbcType=TINYINT}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.acmday.springboot.dao.dao.model.Student">
@@ -121,7 +121,7 @@
         #{address,jdbcType=VARCHAR},
       </if>
       <if test="age != null">
-        #{age,jdbcType=VARCHAR},
+        #{age,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
@@ -144,7 +144,7 @@
         address = #{record.address,jdbcType=VARCHAR},
       </if>
       <if test="record.age != null">
-        age = #{record.age,jdbcType=VARCHAR},
+        age = #{record.age,jdbcType=TINYINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -156,7 +156,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
-      age = #{record.age,jdbcType=VARCHAR}
+      age = #{record.age,jdbcType=TINYINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>

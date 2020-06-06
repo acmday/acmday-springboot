@@ -314,62 +314,52 @@ public class StudentExample {
             return (Criteria) this;
         }
 
-        public Criteria andAgeEqualTo(String value) {
+        public Criteria andAgeEqualTo(Byte value) {
             addCriterion("age =", value, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotEqualTo(String value) {
+        public Criteria andAgeNotEqualTo(Byte value) {
             addCriterion("age <>", value, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeGreaterThan(String value) {
+        public Criteria andAgeGreaterThan(Byte value) {
             addCriterion("age >", value, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeGreaterThanOrEqualTo(String value) {
+        public Criteria andAgeGreaterThanOrEqualTo(Byte value) {
             addCriterion("age >=", value, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLessThan(String value) {
+        public Criteria andAgeLessThan(Byte value) {
             addCriterion("age <", value, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLessThanOrEqualTo(String value) {
+        public Criteria andAgeLessThanOrEqualTo(Byte value) {
             addCriterion("age <=", value, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLike(String value) {
-            addCriterion("age like", value, "age");
-            return (Criteria) this;
-        }
-
-        public Criteria andAgeNotLike(String value) {
-            addCriterion("age not like", value, "age");
-            return (Criteria) this;
-        }
-
-        public Criteria andAgeIn(List<String> values) {
+        public Criteria andAgeIn(List<Byte> values) {
             addCriterion("age in", values, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotIn(List<String> values) {
+        public Criteria andAgeNotIn(List<Byte> values) {
             addCriterion("age not in", values, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeBetween(String value1, String value2) {
+        public Criteria andAgeBetween(Byte value1, Byte value2) {
             addCriterion("age between", value1, value2, "age");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotBetween(String value1, String value2) {
+        public Criteria andAgeNotBetween(Byte value1, Byte value2) {
             addCriterion("age not between", value1, value2, "age");
             return (Criteria) this;
         }

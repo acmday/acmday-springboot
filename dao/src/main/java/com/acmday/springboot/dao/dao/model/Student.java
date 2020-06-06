@@ -1,5 +1,12 @@
 package com.acmday.springboot.dao.dao.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Data
+@AllArgsConstructor
 public class Student {
     private Integer id;
 
@@ -7,7 +14,7 @@ public class Student {
 
     private String address;
 
-    private String age;
+    private Byte age;
 
     public Integer getId() {
         return id;
@@ -33,11 +40,11 @@ public class Student {
         this.address = address;
     }
 
-    public String getAge() {
+    public Byte getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Byte age) {
         this.age = age;
     }
 }
