@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.test;
+package com.acmday.springboot.server.test.demo;
 
 import com.acmday.springboot.dao.dao.model.Student;
 import com.google.gson.Gson;

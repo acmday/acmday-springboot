@@ -31,4 +31,10 @@ public class StudentController {
         }
         return list.get(0).getAddress();
     }
+
+    @RequestMapping("/id")
+    public String getAddressById(int id) {
+        log.info("act=getAddressById id = {}", id);
+        return daoStudentService.getAddressById(id);
+    }
 }
