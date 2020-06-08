@@ -2,9 +2,10 @@ package com.acmday.springboot.dao.dao.mapper;
 
 import com.acmday.springboot.dao.dao.model.Student;
 import com.acmday.springboot.dao.dao.model.StudentExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 public interface StudentMapper {
     long countByExample(StudentExample example);

@@ -1,7 +1,6 @@
 package com.acmday.springboot.server.test.demo;
 
 import com.acmday.springboot.dao.dao.mapper.StudentMapper;
-import com.acmday.springboot.dao.dao.model.Student;
 import com.acmday.springboot.server.Main;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -42,7 +41,7 @@ public class SqlSessionDemo {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            String student = (String) session.selectOne("com.acmday.springboot.dao.dao.mapper.StudentMapper.getAddressById",1);
+            String student = session.selectOne("com.acmday.springboot.dao.dao.mapper.StudentMapper.getAddressById",1);
             log.info("---test={}", new Gson().toJson(student));
         }
     }
