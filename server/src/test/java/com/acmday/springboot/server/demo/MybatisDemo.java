@@ -1,7 +1,9 @@
-package com.acmday.springboot.server.test.demo;
+package com.acmday.springboot.server.demo;
 
+import com.acmday.springboot.server.BaseClass;
 import com.acmday.springboot.server.Main;
-import com.acmday.springboot.server.test.interfaces.UserMapper;
+import com.acmday.springboot.server.interfaces.UserMapper;
+import org.junit.Test;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -11,9 +13,10 @@ import java.lang.reflect.Proxy;
  * @author acmday.
  * @date 2020/6/6.
  */
-public class MybatisDemo {
+public class MybatisDemo extends BaseClass {
 
-    public static void main(String[] args) {
+    @Test
+    public void mapperTest() {
         UserMapper userMapper = (UserMapper) Proxy.newProxyInstance(
                 Main.class.getClassLoader(),
                 new Class<?>[]{UserMapper.class},

@@ -1,6 +1,7 @@
-package com.acmday.springboot.server.test.demo;
+package com.acmday.springboot.server.demo;
 
 import com.acmday.springboot.dao.dao.mapper.StudentMapper;
+import com.acmday.springboot.server.BaseClass;
 import com.acmday.springboot.server.Main;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -23,16 +24,14 @@ import javax.sql.DataSource;
  * @author acmday.
  * @date 2020/6/8.
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Main.class)
 @Slf4j
-public class SqlSessionDemo {
+public class SqlSessionDemo extends BaseClass {
 
     @Resource
     private DataSource dataSource;
 
     @Test
-    public void test() {
+    public void sqlSessionTest() {
 
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         Environment environment = new Environment("dev", transactionFactory, dataSource);

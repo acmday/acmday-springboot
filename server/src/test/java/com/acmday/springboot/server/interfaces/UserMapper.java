@@ -1,6 +1,6 @@
-package com.acmday.springboot.server.test.interfaces;
+package com.acmday.springboot.server.interfaces;
 
-import com.acmday.springboot.server.test.bo.User;
+import com.acmday.springboot.server.bo.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 

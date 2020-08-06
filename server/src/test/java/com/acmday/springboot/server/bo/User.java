@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.test.bo;
+package com.acmday.springboot.server.bo;
 
 import lombok.Data;
 
