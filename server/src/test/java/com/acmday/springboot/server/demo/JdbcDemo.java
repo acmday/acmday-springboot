@@ -1,8 +1,10 @@
-package com.acmday.springboot.server.test;
+package com.acmday.springboot.server.demo;
 
 import com.acmday.springboot.dao.dao.model.Student;
+import com.acmday.springboot.server.BaseClass;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,11 +19,12 @@ import java.util.List;
  * @date 2020/6/6.
  */
 @Slf4j
-public class JdbcDemo {
+public class JdbcDemo extends BaseClass {
 
     private static final String URL = "jdbc:mysql://localhost:3306/acmday?allowMultiQueries=true&charset=utf8mb4&serverTimezone=UTC&characterEncoding=utf-8";
 
-    public static void main(String[] args) {
+    @Test
+    public void jdbcTest() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {

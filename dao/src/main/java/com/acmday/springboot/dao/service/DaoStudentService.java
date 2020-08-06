@@ -25,4 +25,8 @@ public class DaoStudentService {
         cond.createCriteria().andNameEqualTo(name);
         return studentMapper.selectByExample(cond);
     }
+
+    public String getAddressById(int id) {
+        return studentMapper.getAddressById(id);
+    }
 }
