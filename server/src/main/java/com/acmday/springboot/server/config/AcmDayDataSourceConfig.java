@@ -26,8 +26,8 @@ import java.beans.PropertyVetoException;
 @MapperScan(basePackages = AcmDayDataSourceConfig.PACKAGE,sqlSessionFactoryRef = "fromSqlSessionFactory")
 public class AcmDayDataSourceConfig {
 
-    static final String PACKAGE = "com.acmday.springboot.dao.dao.mapper";
-    private static final String MAPPER_XML = "classpath*:com/acmday/springboot/dao/dao/mapper/**/*.xml";
+    static final String PACKAGE = "com.acmday.springboot.dao.mapper";
+    private static final String MAPPER_XML = "classpath*:com/acmday/springboot/dao/mapper/**/*.xml";
 
     @Value("${spring.datasource.day.username}")
     private String userName;

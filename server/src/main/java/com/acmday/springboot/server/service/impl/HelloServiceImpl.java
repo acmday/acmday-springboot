@@ -1,6 +1,6 @@
-package com.acmday.springboot.server.service;
+package com.acmday.springboot.server.service.impl;
 
-import com.acmday.springboot.server.service.interfaces.IHelloService;
+import com.acmday.springboot.server.service.IHelloService;
 import org.springframework.stereotype.Service;
 
 /**

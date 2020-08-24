@@ -1,4 +1,4 @@
-package com.acmday.springboot.dao.dao.model;
+package com.acmday.springboot.dao.model;
 
 import java.util.ArrayList;
 import java.util.List;

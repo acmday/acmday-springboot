@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.acmday.springboot.dao.dao.mapper.StudentMapper">
-  <resultMap id="BaseResultMap" type="com.acmday.springboot.dao.dao.model.Student">
+<mapper namespace="com.acmday.springboot.dao.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.acmday.springboot.dao.model.Student">
     <result column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="address" jdbcType="VARCHAR" property="address" />
@@ -68,7 +68,7 @@
   <sql id="Base_Column_List">
     id, name, address, age
   </sql>
-  <select id="selectByExample" parameterType="com.acmday.springboot.dao.dao.model.StudentExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.acmday.springboot.dao.model.StudentExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -82,13 +82,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.acmday.springboot.dao.dao.model.StudentExample">
+  <delete id="deleteByExample" parameterType="com.acmday.springboot.dao.model.StudentExample">
     delete from student
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.acmday.springboot.dao.dao.model.Student">
+  <insert id="insert" parameterType="com.acmday.springboot.dao.model.Student">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -97,7 +97,7 @@
     values (#{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{age,jdbcType=TINYINT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.acmday.springboot.dao.dao.model.Student">
+  <insert id="insertSelective" parameterType="com.acmday.springboot.dao.model.Student">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -125,7 +125,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.acmday.springboot.dao.dao.model.StudentExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.acmday.springboot.dao.model.StudentExample" resultType="java.lang.Long">
     select count(*) from student
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

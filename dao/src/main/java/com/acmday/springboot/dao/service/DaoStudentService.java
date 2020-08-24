@@ -1,8 +1,8 @@
 package com.acmday.springboot.dao.service;
 
-import com.acmday.springboot.dao.dao.mapper.StudentMapper;
-import com.acmday.springboot.dao.dao.model.Student;
-import com.acmday.springboot.dao.dao.model.StudentExample;
+import com.acmday.springboot.dao.mapper.StudentMapper;
+import com.acmday.springboot.dao.model.Student;
+import com.acmday.springboot.dao.model.StudentExample;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

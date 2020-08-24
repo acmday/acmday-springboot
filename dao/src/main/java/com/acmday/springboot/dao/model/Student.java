@@ -1,4 +1,4 @@
-package com.acmday.springboot.dao.dao.model;
+package com.acmday.springboot.dao.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.service.interfaces;
+package com.acmday.springboot.server.service;
 
 /**
  * @author acmday.

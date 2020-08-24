@@ -1,6 +1,6 @@
 package com.acmday.springboot.server.controller;
 
-import com.acmday.springboot.dao.dao.model.Student;
+import com.acmday.springboot.dao.model.Student;
 import com.acmday.springboot.dao.service.DaoStudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.CollectionUtils;

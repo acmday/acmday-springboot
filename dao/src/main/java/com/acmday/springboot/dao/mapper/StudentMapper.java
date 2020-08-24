@@ -1,7 +1,7 @@
-package com.acmday.springboot.dao.dao.mapper;
+package com.acmday.springboot.dao.mapper;
 
-import com.acmday.springboot.dao.dao.model.Student;
-import com.acmday.springboot.dao.dao.model.StudentExample;
+import com.acmday.springboot.dao.model.Student;
+import com.acmday.springboot.dao.model.StudentExample;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
