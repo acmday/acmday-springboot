@@ -1,5 +1,6 @@
 # acmday-springboot
-- springboot的一些实践
+- springboot的一些实践.
+- 功能入口在test目录下.
 
 ## DDL
 ```sql
