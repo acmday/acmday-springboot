@@ -1,6 +1,7 @@
 # acmday-springboot
 - springboot的一些实践.
 - 功能入口在test目录下.
+- Springboot版本是2.7.4.
 
 ## DDL
 ```sql
