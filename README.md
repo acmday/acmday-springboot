@@ -13,3 +13,8 @@ CREATE TABLE `student` (
   KEY `name_idx` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
+
+### 插入数据
+```sql
+insert student values(1,'acmday','wangjing.Beijing','18');
+```

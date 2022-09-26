@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <contextName>acmday-springboot</contextName>
-    <property name="log.path" value="/home/work/log/acmday-springboot" />
+    <property name="log.path" value="/Users/wushaofeng/logs/acmday-springboot" />
     <property name="log.maxHistory" value="10" />
     <property name="log.colorPattern" value="%d|%-5level|%thread|%logger{40}|%L|%msg%n" />
     <property name="log.pattern" value="%d|%-5level|%thread|%logger{40}|%L|%msg%n" />
