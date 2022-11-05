@@ -1,5 +1,6 @@
 package com.acmday.springboot.server;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -10,5 +11,5 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest(classes = Main.class)
 @RunWith(value = SpringRunner.class)
-public class BaseClass {
+public class BaseTest {
 }

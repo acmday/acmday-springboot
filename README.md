@@ -1,9 +1,17 @@
-# acmday-springboot
+## 一、acmday-springboot概述
 - springboot的一些实践.
 - 功能入口在test目录下.
 - Springboot版本是2.7.4.
 
-## DDL
+## 二、Spring扩展点
+
+## 三、Springboot扩展机制
+
+## 三、Mybatis插件
+
+
+## 四、SQL语句
+### [1]DDL
 ```sql
 CREATE TABLE `student` (
   `id` int(11) NOT NULL DEFAULT '0',
@@ -14,8 +22,7 @@ CREATE TABLE `student` (
   KEY `name_idx` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
-
-### 插入数据
+### [2]插入数据
 ```sql
 insert student values(1,'acmday','wangjing.Beijing','18');
 ```

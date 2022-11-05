@@ -1,7 +1,7 @@
 package com.acmday.springboot.server.unit;
 
 import com.acmday.springboot.dao.service.DaoStudentService;
-import com.acmday.springboot.server.BaseClass;
+import com.acmday.springboot.server.BaseTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ import javax.annotation.Resource;
  * @date 2020/8/24.
  */
 @Slf4j
-public class DaoTest extends BaseClass {
+public class DaoTest extends BaseTest {
 
     @Resource
     private DaoStudentService studentService;
