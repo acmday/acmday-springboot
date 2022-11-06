@@ -1,5 +1,6 @@
 package com.acmday.springboot.server.service.impl;
 
+import com.acmday.springboot.server.annotation.AnnoAttributeExtend;
 import com.acmday.springboot.server.service.IHelloService;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
  * @date 2020/4/16.
  */
 @Service
+@AnnoAttributeExtend
 public class HelloServiceImpl implements IHelloService {
 
     @Override
