@@ -17,7 +17,7 @@ public class BaseEvent<T> extends ApplicationEvent {
     /**
      * 子类决定类型
      */
-    public T payLoad;
+    private T payLoad;
 
     public BaseEvent(Object source, T payLoad) {
         super(source);

@@ -26,7 +26,12 @@ public class ExtendServiceTest extends BaseTest {
     }
 
     @Test
-    public void f() {
+    public void applicationContextPublish() {
         publishListenService.applicationContextPublish();
+    }
+
+    @Test
+    public void publishEvent() {
+        publishListenService.publishEvent();
     }
 }

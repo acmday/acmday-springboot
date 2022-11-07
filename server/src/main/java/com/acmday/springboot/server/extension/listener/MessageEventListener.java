@@ -5,6 +5,7 @@ import com.acmday.springboot.server.extension.event.BaseEvent;
 import com.acmday.springboot.server.extension.event.SendMessageEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,8 +16,9 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MessageEventListener {
 
-    @EventListener(classes = SendMessageEvent.class, condition = "#root.event.payload.tag==false ")
-    public void messageNotice(BaseEvent<MessageEntity> message) {
-        log.info("act=[MessageEventListener.messageNotice], message={}", message);
+    @Async
+    @EventListener(classes = SendMessageEvent.class, condition = "#root.event.payload.tag==false")
+    public void messageNotice(BaseEvent<MessageEntity> event) {
+        log.info("act=[MessageEventListener.messageNotice], message={}", event);
     }
 }

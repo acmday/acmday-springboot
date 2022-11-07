@@ -26,5 +26,5 @@ public class MessageEntity {
     /**
      * 标签
      */
-    private String tag;
+    private boolean tag=false;
 }
