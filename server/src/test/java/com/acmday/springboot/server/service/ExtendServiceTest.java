@@ -1,6 +1,7 @@
 package com.acmday.springboot.server.service;
 
 import com.acmday.springboot.server.BaseTest;
+import com.acmday.springboot.server.service.impl.PublishListenServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -16,8 +17,16 @@ public class ExtendServiceTest extends BaseTest {
     @Resource
     private IExtendService extendService;
 
+    @Resource
+    private PublishListenServiceImpl publishListenService;
+
     @Test
     public void postConstructExtend() {
         log.info("test=postConstructExtend");
+    }
+
+    @Test
+    public void f() {
+        publishListenService.applicationContextPublish();
     }
 }
