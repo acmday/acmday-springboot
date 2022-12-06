@@ -1,7 +1,5 @@
 package com.acmday.springboot.server.extension.listener;
 
-import com.acmday.springboot.server.extension.entity.MessageEntity;
-import com.acmday.springboot.server.extension.event.BaseEvent;
 import com.acmday.springboot.server.extension.event.SendMessageEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
@@ -18,7 +16,7 @@ public class MessageEventListener {
 
     @Async
     @EventListener(classes = SendMessageEvent.class, condition = "#root.event.payload.tag==false")
-    public void messageNotice(BaseEvent<MessageEntity> event) {
+    public void messageNotice(SendMessageEvent event) {
         log.info("act=[MessageEventListener.messageNotice], message={}", event);
     }
 }

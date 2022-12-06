@@ -3,7 +3,6 @@ package com.acmday.springboot.server.service.impl;
 import com.acmday.springboot.server.extension.entity.MessageEntity;
 import com.acmday.springboot.server.extension.event.SendMessageEvent;
 import com.acmday.springboot.server.service.IPublishListenService;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;

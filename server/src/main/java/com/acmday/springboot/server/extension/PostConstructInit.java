@@ -1,6 +1,5 @@
 package com.acmday.springboot.server.extension;
 
-import lombok.extern.apachecommons.CommonsLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

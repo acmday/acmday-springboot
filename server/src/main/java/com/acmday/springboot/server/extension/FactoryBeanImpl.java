@@ -1,8 +1,6 @@
 package com.acmday.springboot.server.extension;
 
-import com.acmday.springboot.server.service.IExtendService;
 import com.acmday.springboot.server.service.IHelloService;
-import com.acmday.springboot.server.service.impl.ExtendServiceImpl;
 import com.acmday.springboot.server.service.impl.HelloServiceImpl;
 import org.springframework.beans.factory.FactoryBean;
 

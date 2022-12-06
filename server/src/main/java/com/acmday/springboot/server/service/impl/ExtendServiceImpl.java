@@ -5,7 +5,6 @@ import com.acmday.springboot.server.service.IExtendService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
