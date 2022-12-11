@@ -7,10 +7,10 @@
 
 ## 三、Springboot扩展机制
 
-## 三、Mybatis插件
+## 四、Mybatis插件
 
 
-## 四、SQL语句
+## 五、SQL语句
 ### [1]DDL
 ```sql
 CREATE TABLE `student` (
