@@ -15,7 +15,8 @@ import javax.annotation.Resource;
 @Service
 public class ExtendServiceImpl implements IExtendService {
 
-    @Resource
-    private PostConstructInit postConstructInit;
-
+    @Override
+    public int getType() {
+        return 0;
+    }
 }

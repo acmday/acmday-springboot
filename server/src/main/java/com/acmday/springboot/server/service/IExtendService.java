@@ -6,4 +6,5 @@ package com.acmday.springboot.server.service;
  */
 public interface IExtendService {
 
+    int getType();
 }

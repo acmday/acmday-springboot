@@ -22,7 +22,10 @@ public class MessageEventListenerTest extends BaseTest {
     public void publishEvent() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(HelloMessageListener.class);
         HelloMessageEvent event = new HelloMessageEvent(new Object(), "事件1", true);
-        context.publishEvent(event);
+        //判断当前ApplicationContext有没有父级 ，如果有则执行父级调用publishEvent 否则ApplicationListener会被多次执行
+        if (context.getParent() != null) {
+            context.publishEvent(event);
+        }
         log.info("act=[publishEvent] event={}", new Gson().toJson(event));
         context.close();
     }
