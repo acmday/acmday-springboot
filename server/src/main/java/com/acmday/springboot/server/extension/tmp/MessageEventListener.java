@@ -1,6 +1,5 @@
-package com.acmday.springboot.server.extension.listener;
+package com.acmday.springboot.server.extension.tmp;
 
-import com.acmday.springboot.server.extension.event.SendMessageEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;

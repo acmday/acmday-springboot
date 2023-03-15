@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @date 2022/11/6 下午9:48
  */
 @Slf4j
-@Component
 public class DisposableBeanImpl implements DisposableBean {
 
     /**

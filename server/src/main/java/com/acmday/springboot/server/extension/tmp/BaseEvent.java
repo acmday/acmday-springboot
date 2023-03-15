@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.extension.event;
+package com.acmday.springboot.server.extension.tmp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;

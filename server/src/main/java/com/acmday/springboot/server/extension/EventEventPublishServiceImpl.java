@@ -1,8 +1,8 @@
-package com.acmday.springboot.server.service.impl;
+package com.acmday.springboot.server.extension;
 
 import com.acmday.springboot.server.extension.entity.MessageEntity;
-import com.acmday.springboot.server.extension.event.SendMessageEvent;
-import com.acmday.springboot.server.service.IPublishListenService;
+import com.acmday.springboot.server.extension.tmp.SendMessageEvent;
+import com.acmday.springboot.server.service.IEventPublishService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -14,14 +14,14 @@ import javax.annotation.Resource;
  * @date 2022/11/6 下午11:50
  */
 @Service
-public class PublishListenServiceImpl implements IPublishListenService {
+public class EventEventPublishServiceImpl implements IEventPublishService {
 
     @Resource
     private ApplicationContext applicationContext;
 
     private final ApplicationEventPublisher publisher;
 
-    public PublishListenServiceImpl(ApplicationEventPublisher publisher) {
+    public EventEventPublishServiceImpl(ApplicationEventPublisher publisher) {
         this.publisher = publisher;
     }
 

@@ -11,7 +11,6 @@ import java.util.Arrays;
  * @date 2022/11/6 下午9:46
  */
 @Slf4j
-@Component
 public class CommandLineRunnerImpl implements CommandLineRunner {
     /**
      * 触发时机为整个项目启动完毕后，自动执行。如果有多个CommandLineRunner，可以利用@Order来进行排序

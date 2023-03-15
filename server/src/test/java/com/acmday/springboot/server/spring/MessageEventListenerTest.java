@@ -2,10 +2,10 @@ package com.acmday.springboot.server.spring;
 
 import com.acmday.springboot.server.BaseTest;
 import com.acmday.springboot.server.extension.entity.MessageEntity;
-import com.acmday.springboot.server.extension.event.HelloMessageEvent;
-import com.acmday.springboot.server.extension.event.SendMessageEvent;
-import com.acmday.springboot.server.extension.listener.HelloMessageListener;
-import com.acmday.springboot.server.extension.listener.MessageEventListener;
+import com.acmday.springboot.server.extension.tmp.HelloMessageEvent;
+import com.acmday.springboot.server.extension.tmp.SendMessageEvent;
+import com.acmday.springboot.server.extension.tmp.HelloMessageListener;
+import com.acmday.springboot.server.extension.tmp.MessageEventListener;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;

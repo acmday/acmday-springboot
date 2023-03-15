@@ -1,7 +1,9 @@
-package com.acmday.springboot.server.service;
+package com.acmday.springboot.server.spring;
 
 import com.acmday.springboot.server.BaseTest;
 import com.acmday.springboot.server.extension.FactoryBeanImpl;
+import com.acmday.springboot.server.extension.entity.Teacher;
+import com.acmday.springboot.server.service.IHelloService;
 import com.acmday.springboot.server.service.impl.HelloServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -15,6 +17,23 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 @Slf4j
 public class FactoryBeanTest extends BaseTest {
+
+    @Test
+    public void getBean1() {
+        // 获取beanDefinition
+        AbstractBeanDefinition beanDefinition = BeanDefinitionBuilder.genericBeanDefinition().getBeanDefinition();
+
+        // 创建工厂bean
+        beanDefinition.setBeanClass(Teacher.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.registerBeanDefinition("teacher", beanDefinition);
+        context.refresh();
+        Teacher person = context.getBean(Teacher.class);
+        log.info("teacher={}", person);
+
+        log.info("现在开始关闭容器！");
+        context.registerShutdownHook();
+    }
 
     @Test
     public void getBean2() throws Exception {
@@ -38,7 +57,7 @@ public class FactoryBeanTest extends BaseTest {
     }
 
     @Test
-    public void getBean1() {
+    public void getBean3() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(HelloServiceImpl.class);
         IHelloService helloService = context.getBean(IHelloService.class);
         String echo = helloService.echo("getBean1");

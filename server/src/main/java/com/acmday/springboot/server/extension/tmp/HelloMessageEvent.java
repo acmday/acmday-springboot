@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.extension.event;
+package com.acmday.springboot.server.extension.tmp;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEvent;

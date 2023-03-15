@@ -16,4 +16,9 @@ public class HelloServiceImpl implements IHelloService {
     public String echo(String msg) {
         return "echo:" + msg;
     }
+
+    @Override
+    public int getType() {
+        return 10010;
+    }
 }

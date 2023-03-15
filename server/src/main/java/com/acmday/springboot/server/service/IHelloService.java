@@ -11,4 +11,6 @@ public interface IHelloService {
      * @return
      */
     String echo(String msg);
+
+    int getType();
 }
