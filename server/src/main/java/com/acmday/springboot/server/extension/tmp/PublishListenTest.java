@@ -1,6 +1,6 @@
 package com.acmday.springboot.server.extension.tmp;
 
-import com.acmday.springboot.server.extension.EventEventPublishServiceImpl;
+import com.acmday.springboot.server.extension.listener.EventPublishServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.Resource;
@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 public class PublishListenTest  {
 
     @Resource
-    private EventEventPublishServiceImpl publishListenService;
+    private EventPublishServiceImpl publishListenService;
 //
 //    @Test
 //    public void postConstructExtend() {

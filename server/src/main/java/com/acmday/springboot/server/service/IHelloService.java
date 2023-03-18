@@ -12,5 +12,5 @@ public interface IHelloService {
      */
     String echo(String msg);
 
-    int getType();
+    String getName();
 }

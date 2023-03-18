@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.extension;
+package com.acmday.springboot.server.extension.listener;
 
 import com.acmday.springboot.server.extension.entity.MessageEntity;
 import com.acmday.springboot.server.extension.tmp.SendMessageEvent;
@@ -14,14 +14,14 @@ import javax.annotation.Resource;
  * @date 2022/11/6 下午11:50
  */
 @Service
-public class EventEventPublishServiceImpl implements IEventPublishService {
+public class EventPublishServiceImpl implements IEventPublishService {
 
     @Resource
     private ApplicationContext applicationContext;
 
     private final ApplicationEventPublisher publisher;
 
-    public EventEventPublishServiceImpl(ApplicationEventPublisher publisher) {
+    public EventPublishServiceImpl(ApplicationEventPublisher publisher) {
         this.publisher = publisher;
     }
 

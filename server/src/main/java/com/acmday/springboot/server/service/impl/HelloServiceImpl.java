@@ -18,7 +18,7 @@ public class HelloServiceImpl implements IHelloService {
     }
 
     @Override
-    public int getType() {
-        return 10010;
+    public String getName() {
+        return this.getClass().getSimpleName();
     }
 }
