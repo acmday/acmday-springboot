@@ -3,7 +3,7 @@ package com.acmday.springboot.server.extension.a;
 import org.springframework.context.ApplicationEvent;
 
 /**
- * @Author wushaofeng
+ * @Author acmday
  * @Date 2023/3/17 5:33 下午
  */
 public class UserAddEvent extends ApplicationEvent {
