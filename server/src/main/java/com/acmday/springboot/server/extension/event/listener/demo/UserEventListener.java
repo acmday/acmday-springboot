@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.extension.a;
+package com.acmday.springboot.server.extension.event.listener.demo;
 
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-public class UserEventListenerInterface implements ApplicationListener<UserAddEvent> {
+public class UserEventListener implements ApplicationListener<UserAddEvent> {
 
     @Override
     public void onApplicationEvent(UserAddEvent event) {

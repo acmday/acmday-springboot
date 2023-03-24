@@ -1,18 +1,18 @@
-package com.acmday.springboot.server.extension.a;
+package com.acmday.springboot.server.extension.event.listener.demo;
 
 import org.springframework.context.ApplicationEvent;
 
 /**
- * @Author wushaofeng
+ * @Author acmday
  * @Date 2023/3/17 5:33 下午
  */
-public class UserDelEvent extends ApplicationEvent {
+public class UserAddEvent extends ApplicationEvent {
 
     private static final long serialVersionUID = -3910960183687086015L;
 
     private UserInfo user;
 
-    public UserDelEvent(Object source, UserInfo user) {
+    public UserAddEvent(Object source, UserInfo user) {
         super(source);
         this.user = user;
     }
@@ -27,6 +27,6 @@ public class UserDelEvent extends ApplicationEvent {
 
     @Override
     public String toString() {
-        return "UserDeleteEvent [user=" + user + "]";
+        return "UserAddEvent [user=" + user + "]";
     }
 }

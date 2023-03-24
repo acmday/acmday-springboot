@@ -1,6 +1,5 @@
-package com.acmday.springboot.server.extension.a;
+package com.acmday.springboot.server.extension.event.listener.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
@@ -17,10 +16,6 @@ public class UserEventPublisherContext {
     private ApplicationContext applicationContext;
 
     public void publishUserAddEvent(UserAddEvent event) {
-        applicationContext.publishEvent(event);
-    }
-
-    public void publishUserDelEvent(UserDelEvent event) {
         applicationContext.publishEvent(event);
     }
 }

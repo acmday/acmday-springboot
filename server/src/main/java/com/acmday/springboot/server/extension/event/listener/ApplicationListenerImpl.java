@@ -1,4 +1,4 @@
-package com.acmday.springboot.server.extension.listener;
+package com.acmday.springboot.server.extension.event.listener;
 
 import com.acmday.springboot.server.service.IHelloService;
 import com.google.gson.Gson;

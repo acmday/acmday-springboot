@@ -1,14 +1,7 @@
 package com.acmday.springboot.server.spring;
 
 import com.acmday.springboot.server.BaseTest;
-import com.acmday.springboot.server.extension.a.UserAddEvent;
-import com.acmday.springboot.server.extension.a.UserEventPublisher;
-import com.acmday.springboot.server.extension.a.UserEventPublisherContext;
-import com.acmday.springboot.server.extension.a.UserInfo;
-import com.acmday.springboot.server.extension.entity.Teacher;
-import com.acmday.springboot.server.extension.listener.TeacherEventListener;
-import com.acmday.springboot.server.extension.listener.TeacherPublisher;
-import com.acmday.springboot.server.extension.listener.event.TeacherEvent;
+import com.acmday.springboot.server.extension.event.listener.demo.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -22,19 +15,14 @@ import javax.annotation.Resource;
 public class ListenerEventTest extends BaseTest {
 
     @Resource
-    private TeacherPublisher teacherPublisher;
-    @Resource
     private UserEventPublisherContext userEventPublisherContext;
     @Resource
     private UserEventPublisher userEventPublisher;
+    @Resource
+    private UserEventPublisherAware userEventPublisherAware;
 
     @Test
-    public void publishEvent() {
-        teacherPublisher.publishEvent(new TeacherEvent(this, new Teacher()));
-    }
-
-    @Test
-    public void publishUserAddEvent() {
+    public void applicationContext() {
         UserInfo user = new UserInfo();
         user.setAge(18);
         user.setName("ocean");
@@ -44,7 +32,7 @@ public class ListenerEventTest extends BaseTest {
     }
 
     @Test
-    public void ff() {
+    public void applicationEventPublisher() {
         UserInfo user = new UserInfo();
         user.setAge(18);
         user.setName("ocean");
@@ -53,5 +41,14 @@ public class ListenerEventTest extends BaseTest {
         userEventPublisher.publishUserAddEvent(event);
     }
 
+    @Test
+    public void applicationEventPublisherAware() {
+        UserInfo user = new UserInfo();
+        user.setAge(18);
+        user.setName("ocean");
+
+        UserAddEvent event = new UserAddEvent(this, user);
+        userEventPublisherAware.publishUserAddEvent(event);
+    }
 
 }
